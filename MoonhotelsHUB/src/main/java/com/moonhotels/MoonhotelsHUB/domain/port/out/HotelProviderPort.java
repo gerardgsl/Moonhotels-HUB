@@ -4,5 +4,5 @@ import com.moonhotels.MoonhotelsHUB.domain.model.HubSearchRequest;
 import com.moonhotels.MoonhotelsHUB.domain.model.HubSearchResponse;
 
 public interface HotelProviderPort {
-    HubSearchResponse fetchHotelAvailability(HubSearchRequest request);
+    HubSearchResponse searchAvailability(HubSearchRequest request);
 }

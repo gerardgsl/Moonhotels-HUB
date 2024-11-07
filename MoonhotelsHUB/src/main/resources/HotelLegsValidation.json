@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "room": {
+              "type": "integer"
+            },
+            "meal": {
+              "type": "integer"
+            },
+            "canCancel": {
+              "type": "boolean"
+            },
+            "price": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "room",
+            "meal",
+            "canCancel",
+            "price"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "room": {
+              "type": "integer"
+            },
+            "meal": {
+              "type": "integer"
+            },
+            "canCancel": {
+              "type": "boolean"
+            },
+            "price": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "room",
+            "meal",
+            "canCancel",
+            "price"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "room": {
+              "type": "integer"
+            },
+            "meal": {
+              "type": "integer"
+            },
+            "canCancel": {
+              "type": "boolean"
+            },
+            "price": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "room",
+            "meal",
+            "canCancel",
+            "price"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "room": {
+              "type": "integer"
+            },
+            "meal": {
+              "type": "integer"
+            },
+            "canCancel": {
+              "type": "boolean"
+            },
+            "price": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "room",
+            "meal",
+            "canCancel",
+            "price"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "results"
+  ]
+}
