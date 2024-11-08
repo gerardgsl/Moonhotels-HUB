@@ -3,6 +3,8 @@ package com.moonhotels.MoonhotelsHUB.adapter.out.hotellegs;
 import com.moonhotels.MoonhotelsHUB.domain.model.HubSearchRequest;
 import com.moonhotels.MoonhotelsHUB.domain.model.HubSearchResponse;
 import com.moonhotels.MoonhotelsHUB.domain.port.out.HotelProviderPort;
+import com.moonhotels.MoonhotelsHUB.infrastructure.mapper.HubSearchRequestToHotelLegsRequestMapper;
+
 import org.springframework.stereotype.Component;
 
 @Component
@@ -16,6 +18,7 @@ public class HotelLegsAdapter implements HotelProviderPort {
 
  @Override
  public HubSearchResponse searchAvailability(HubSearchRequest request) {
-     return mockHotelLegsAPI.search(request);
+	 HotelLegsRequest hotelLegsRequest = HubSearchRequestToHotelLegsRequestMapper.INSTANCE.mapToHotelRequest(request);
+     return mockHotelLegsAPI.search(hotelLegsRequest);
  }
 }
