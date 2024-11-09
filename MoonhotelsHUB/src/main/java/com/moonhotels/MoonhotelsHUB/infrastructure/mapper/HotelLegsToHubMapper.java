@@ -46,6 +46,6 @@ public interface HotelLegsToHubMapper {
 
     // Mapea de Result a Rate
     @Mapping(source = "meal", target = "mealPlanId")
-    @Mapping(source = "canCancel", target = "isCancellable")
+    @Mapping(source = "canCancel", target = "cancellable")
     HubSearchResponse.Rate toRate(HotelLegsResponse.Result result);
 }
