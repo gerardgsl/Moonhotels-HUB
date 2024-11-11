@@ -12,7 +12,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class HotelLegsRequest {
 	private int hotel;
-    private String checkInDate;
+    private LocalDate checkInDate;
     private int numberOfNights;
     private int guests;
     private int rooms;
