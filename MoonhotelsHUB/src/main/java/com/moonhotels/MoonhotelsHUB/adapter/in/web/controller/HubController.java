@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/hub")
@@ -34,9 +35,10 @@ public class HubController {
                 schema = @Schema(implementation = HubSearchResponse.class)) }),
         @ApiResponse(responseCode = "400", description = "Invalid search parameters",
             content = @Content),        
+        @ApiResponse(responseCode = "500", description = "Internal server error")
     })
     @PostMapping("/search")
-    public HubSearchResponse searchHotels(@RequestBody HubSearchRequest request) {
-        return searchHotelUseCase.searchHotels(request);
+    public ResponseEntity<HubSearchResponse> searchHotels(@Valid @RequestBody HubSearchRequest request) {
+        return ResponseEntity.ok(searchHotelUseCase.searchHotels(request));
     }
 }

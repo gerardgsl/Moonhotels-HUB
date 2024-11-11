@@ -1,0 +1,13 @@
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                {"timestamp":"%d{yyyy-MM-dd'T'HH:mm:ss.SSS'Z'}", "level":"%level", "message":"%message", "layer":"%X{layer}", "controllerMethod":"%X{controllerMethod}", "path":"%X{path}", "serviceMethod":"%X{serviceMethod}", "requestId":"%X{requestId}", "exception":"%ex"}
+            </pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>
