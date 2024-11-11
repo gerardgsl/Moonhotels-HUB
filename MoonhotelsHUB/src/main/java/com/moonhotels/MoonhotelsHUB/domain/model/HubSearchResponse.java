@@ -1,5 +1,6 @@
 package com.moonhotels.MoonhotelsHUB.domain.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -10,7 +11,7 @@ import lombok.Setter;
 @Setter
 public class HubSearchResponse {
 
-    private List<Room> rooms;
+	private List<Room> rooms = new ArrayList<>();
 
     @Getter
     @Setter
